@@ -3,8 +3,6 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import { LuBadgeAlert } from "react-icons/lu";
 import { useState } from "react";
-import { use } from "react";
-import { useEffect } from "react";
 
 const NewCFDI = ({
   usesCFDI,
@@ -68,13 +66,6 @@ const NewCFDI = ({
         {({ isSubmitting, values, setFieldValue }) => {
           onChangeCFDI(values);
 
-          useEffect(() => {
-            // Limpia la lista de relaciones si el usuario selecciona "No"
-            if(values.metodoPago === "PPD" ) {
-              setFieldValue("formaPago", "99");
-            }
-          }, [values.metodoPago, setFieldValue]);
-
           // 🔹 Cuando cambia el UUID relacionado
           const handleAddRelated = () => {
             if (values.tipoRelacion && values.cfdiRelacionados) {
@@ -93,7 +84,6 @@ const NewCFDI = ({
                 setFieldValue("cfdiRelacionados", "");
               }
             }
-            
           };
 
           // 🔹 Eliminar un UUID de la lista
@@ -204,11 +194,17 @@ const NewCFDI = ({
                       className="w-full h-full outline-none border-2 border-white"
                     >
                       <option value="">Seleccione uso</option>
-                      {usesCFDI?.map((item, i) => (
-                        <option key={i} value={item.key}>
-                          {item.name}
-                        </option>
-                      ))}
+                      <option value="">Seleccione uso</option>
+
+                      {usesCFDI
+                        ?.filter((item) =>
+                          item.regimenes.includes(values.regimenFiscal)
+                        )
+                        .map((item) => (
+                          <option key={item.key} value={item.key}>
+                            {item.name}
+                          </option>
+                        ))}
                     </Field>
                   </label>
                   <ErrorMessage

@@ -3,7 +3,7 @@ import axios from "axios";
 const api = axios.create({
   // baseURL: "https://managerapi.blundey.com", //URL para el servidor
 
-  baseURL: "https://managerapipruebas.blundey.com", //URL para pruebas de en el servidor
+  // baseURL: "https://managerapipruebas.blundey.com", //URL para pruebas de en el servidor
   // baseURL: "https://localhost:44399/", //URL para pruebas de en el servidor
 });
 
