@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Para Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body {
+  font-family: "Roboto", serif;
+  background-color: #f4f4f5;
+}
+
+button {
+  cursor: pointer !important;
+}
+
+.table-Scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.transition-UI {
+  transition: .3s;
+}
+
+.inputs-placeholder::after {
+  position: absolute;
+  content: attr(data-text);
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  background-color: #ffffff;
+  padding: 0 10px;
+  color: #a1a1aa;
+}
+
+.line-row {
+  width: 100%;
+  height: 1px;
+  background-color: #e6e6e6;
+}
+
+.line-col {
+  height: 100%;
+  width: 1px;
+  background-color: #e6e6e6;
+}
+
+.th {
+  padding: 0 !important;
+}
+
+/* Ocultar scrollbar en WebKit por defecto */
+.scroll::-webkit-scrollbar {
+  width: 0px;
+  display: none;
+}
+
+/* Mostrar scrollbar solo al pasar el mouse sobre el div */
+.scroll:hover::-webkit-scrollbar {
+  width: 5px;
+  display: block;
+}
+
+.scroll::-webkit-scrollbar-track {
+  background: #1b1b1b;
+  border-radius: 7px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 20px;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+  background: #525252;
+}
+
+.scroll-panel::-webkit-scrollbar {
+  width: 0px;
+  display: none;
+}
+
+/* Mostrar scrollbar solo al pasar el mouse sobre el div */
+.scroll-panel:hover::-webkit-scrollbar {
+  width: 5px;
+  display: flex;
+  z-index: 30;
+}
+
+.scroll-panel::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 7px;
+}
+
+.scroll-panel::-webkit-scrollbar-thumb {
+  background: #8a8a8a;
+  border-radius: 20px;
+}
+
+.scroll-panel::-webkit-scrollbar-thumb:hover {
+  background: #525252;
+}
+
+.card .blob,
+.card .blob-reverse {
+  transition: transform 0.1s linear;
+}
+
+.card:hover .blob {
+  animation: spin 8s linear infinite;
+}
+
+.card:hover .blob-reverse {
+  animation: spinreverse 8s linear infinite;
+}
+
+/* Detener la animación al quitar hover y mantener la última posición */
+.card .blob,
+.card .blob-reverse {
+  animation: none;
+}
+
+.cronometer {
+  animation: cronometer 8s linear;
+}
+
+.pendingGroupTask {
+  animation: important 1.3s linear infinite;
+}
+
+@keyframes important {
+  0% {
+    background-color: #e7000b;
+  }
+  50% {
+    background-color: #42424200;
+  }
+  100% {
+    background-color: #e7000b;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinreverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes cronometer {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0px;
+  }
+}

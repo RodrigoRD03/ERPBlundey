@@ -1,0 +1,107 @@
+.react-calendar__navigation {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 4px;
+}
+
+.react-calendar__navigation__label__labelText,
+.react-calendar__tile {
+  text-transform: capitalize !important;
+}
+
+.react-calendar__navigation__next-button,
+.react-calendar__navigation__prev-button {
+  width: 50px;
+  height: 30px;
+  align-self: center;
+  background-color: rgb(54, 192, 54) !important;
+  border-radius: 5px;
+}
+
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button {
+  width: 50px;
+  height: 30px;
+  align-self: center;
+  background-color: rgb(235, 185, 23) !important;
+  border-radius: 5px;
+}
+
+.react-calendar__viewContainer {
+  background-color: rgb(233, 233, 233);
+  border-radius: 5px;
+}
+
+.react-calendar__month-view__days {
+  row-gap: 2px;
+}
+
+.react-calendar__month-view__days__day {
+  width: 50px !important;
+  height: 45px !important;
+}
+
+.react-calendar__month-view__weekdays {
+  background-color: #689ebe;
+  border-radius: 5px 5px 0 0;
+}
+.react-calendar__month-view__weekdays__weekday {
+  height: 30px;
+  text-align: center;
+  padding-top: 3px;
+  font-weight: semibold;
+  text-transform: capitalize;
+  text-decoration: none!;
+}
+
+.react-calendar__tile--now {
+  background-color: rgb(238, 121, 12);
+  border-radius: 5px;
+  color: #ffffff;
+}
+.react-calendar__tile--now:hover {
+  color: #000000;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #ff0000;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #a1a1a1;
+}
+
+.marked-day {
+  border-radius: 100%;
+  color: #ffffff;
+  background-color: #ff0000;
+  font-weight: bold;
+}
+
+.react-calendar__tile--active {
+  background-color: #dfb705;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.important-day {
+  animation: important infinite 1.5s;
+}
+
+@keyframes important {
+  0% {
+    background-color: #ff0000;
+    color: #fff;
+     border: 1px solid #ff0000
+  }
+  50% {
+    background-color: #f1f1f1;
+    color: #ff0000;
+    border: 1px solid #ff0000
+  }
+  100% {
+    background-color: #ff0000;
+    color: #fff;
+     border: 1px solid #ff0000
+  }
+}

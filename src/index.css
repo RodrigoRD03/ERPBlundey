@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-sovetec-primary: oklch(50.16% 0.1094 243.86);
+  --color-sovetec-secundary: oklch(41.84% 0.1094 243.86);
+  --color-sovetec-thirty: oklch(58.52% 0.0927 239.37);
+  --color-sovetec-fourty: oklch(67.38% 0.0742 235.44);
+  --color-sovetec-fifty: oklch(75.93% 0.0557 230.61);
+  --color-sovetec-sixty: oklch(0.9058 0.0557 230.61 / 89.97%);
+  --color-accent-100: oklch(29.72% 0 0);
+  --color-accent-200: oklch(88.53% 0 0);
+  --color-accent-300: oklch(22.21% 0 0);
+  --font-display: "Poppins", sans-serif;
+}
